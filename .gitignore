@@ -43,3 +43,4 @@ wheels/
 # Sistema operacional
 .DS_Store
 Thumbs.db
+.ai-jail
