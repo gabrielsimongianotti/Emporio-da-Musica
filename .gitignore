@@ -8,6 +8,10 @@ venv/
 *.sqlite
 vector_store/
 
+# PDFs de submissão gerados
+*.pdf
+!data/*.pdf
+
 # Python
 __pycache__/
 *.py[cod]
