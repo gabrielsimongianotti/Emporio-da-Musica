@@ -1,13 +1,15 @@
-# Exemplo 3 - Consulta de preço específico
+# Exemplo 3 - Consulta de preço específico com promoção
 
-Cenário: Cliente pergunta o preço de um produto específico.
+Cenário: Cliente pergunta o preço de um produto específico que está em promoção.
 
 ---
 
-Cliente: Quanto custa o Takamine GD20?
+Cliente: Quanto custa o Taylor 214ce?
 
-Empório da Música: O Takamine GD20 Dreadnought Natural custa R$ 2.199,00.
+Empório da Música: O Taylor 214ce Elétrico Aço Natural custa R$ 7.499,00, mas está com uma promoção ativa de 12% de desconto!
 
-Ele é um violão dreadnought com tampo sólido em cedro, excelente para fingerstyle, com timbre quente e definido. Atualmente temos 5 unidades em estoque.
+Com o desconto, o preço fica R$ 6.599,12. Temos 2 unidades em estoque.
 
-Quer saber mais alguma coisa sobre ele ou ver opções similares?
+Ele é um violão eletroacústico Taylor Grand Auditorium com tampo sólido em Sitka Spruce e sistema ES2 para som amplificado cristalino.
+
+Quer saber mais alguma coisa sobre ele?

@@ -13,6 +13,7 @@ from src.config import (
     ORDERS_CSV,
     PRODUCTS_CSV,
     PROMOTIONS_CSV,
+    logger,
 )
 
 
@@ -24,9 +25,12 @@ def _csv_to_sqlite(csv_path: Path, table_name: str, conn: sqlite3.Connection) ->
 
 def init_database(db_path: Path = DATABASE_PATH) -> sqlite3.Connection:
     """Cria o banco SQLite e carrega todos os CSVs."""
+    logger.info("Inicializando banco de dados em %s", db_path)
+
     # Remove banco antigo para garantir dados atualizados
     if db_path.exists():
         db_path.unlink()
+        logger.info("Banco antigo removido")
 
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row  # permite acesso por nome de coluna
@@ -46,6 +50,7 @@ def init_database(db_path: Path = DATABASE_PATH) -> sqlite3.Connection:
     conn.execute("CREATE INDEX idx_promotions_product ON promotions(product_id)")
 
     conn.commit()
+    logger.info("Banco de dados criado com sucesso")
     return conn
 
 

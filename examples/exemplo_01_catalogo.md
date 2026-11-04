@@ -6,7 +6,7 @@ Cenário: Cliente quer saber opções de violões até R$ 1000.
 
 Cliente: Oi! Quais opções de violões disponíveis custando até R$ 1000?
 
-Empório da Música: Oi! Tudo bem? 😊
+Empório da Música: Oi! Tudo bem? Sou o assistente da Empório da Música.
 
 Separei alguns violões disponíveis até R$ 1000 pra você:
 
@@ -18,17 +18,17 @@ Separei alguns violões disponíveis até R$ 1000 pra você:
    - Violão clássico de estudo, feito com madeiras nacionais.
    - Estoque: 10 unidades
 
-3. Giannini GF-1R Aço Folk Sunburst — R$ 579,90
+3. Shelby SN-100 Folk Aço Preto — R$ 549,00
+   - Violão folk aço com visual moderno em preto.
+   - Estoque: 5 unidades
+
+4. Giannini GF-1R Aço Folk Sunburst — R$ 579,90
    - Violão folk com tampo em Spruce e acabamento Sunburst.
    - Estoque: 7 unidades
 
-4. Yamaha C40 Nylon Natural — R$ 599,90
+5. Yamaha C40 Nylon Natural — R$ 599,90
    - Violão clássico com tampo em Spruce, ideal para estudantes.
    - Estoque: 12 unidades
-
-5. Shelby SN-100 Folk Aço Preto — R$ 549,00
-   - Violão folk aço com visual moderno em preto.
-   - Estoque: 5 unidades
 
 6. Yamaha F310 Aço Natural — R$ 699,90
    - Violão folk aço Yamaha, um dos modelos mais vendidos do mundo.

@@ -7,7 +7,15 @@ from langchain_community.vectorstores import FAISS
 from langchain_openai import OpenAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from src.config import CHUNK_OVERLAP, CHUNK_SIZE, OPENAI_API_KEY, POLICIES_PDF, VECTOR_STORE_DIR
+from src.config import (
+    CHUNK_OVERLAP,
+    CHUNK_SIZE,
+    EMBEDDING_MODEL,
+    OPENAI_API_KEY,
+    POLICIES_PDF,
+    VECTOR_STORE_DIR,
+    logger,
+)
 
 
 def load_policies_vectorstore(
@@ -21,15 +29,20 @@ def load_policies_vectorstore(
     """
     index_path = persist_dir / "index.faiss"
 
-    embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
+    embeddings = OpenAIEmbeddings(
+        model=EMBEDDING_MODEL,
+        openai_api_key=OPENAI_API_KEY,
+    )
 
     if index_path.exists():
-        # Reutiliza vector store existente
+        logger.info("Reutilizando vector store existente em %s", persist_dir)
         return FAISS.load_local(
             str(persist_dir),
             embeddings,
             allow_dangerous_deserialization=True,
         )
+
+    logger.info("Criando novo vector store a partir de %s", pdf_path)
 
     # Lê o PDF
     loader = PyPDFLoader(str(pdf_path))
@@ -48,6 +61,7 @@ def load_policies_vectorstore(
     vectorstore = FAISS.from_documents(chunks, embeddings)
     vectorstore.save_local(str(persist_dir))
 
+    logger.info("Vector store criado com sucesso em %s", persist_dir)
     return vectorstore
 
 
